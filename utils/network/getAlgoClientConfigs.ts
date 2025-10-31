@@ -29,6 +29,7 @@ export function getIndexerConfigFromEnvironment(): AlgoViteClientConfig {
   }
 }
 
+/** Get KMD (Key Management Daemon) configuration from environment variables */
 export function getKmdConfigFromEnvironment(): AlgoViteKMDConfig {
   if (!process.env.NEXT_PUBLIC_KMD_SERVER) {
     throw new Error('Attempt to get default kmd configuration without specifying NEXT_PUBLIC_KMD_SERVER in the environment variables')
