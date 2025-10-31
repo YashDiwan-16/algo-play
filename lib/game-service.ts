@@ -1,3 +1,17 @@
+/**
+ * Game Service Module
+ *
+ * This module provides a comprehensive service layer for managing games
+ * on the AlgoPlay platform, including:
+ * - Game creation and versioning
+ * - Publishing to marketplace and community
+ * - Game forking and collaboration
+ * - IPFS integration for decentralized storage
+ * - Search and discovery functionality
+ *
+ * @module lib/game-service
+ */
+
 import type { Filter } from "mongodb";
 import {
   MAX_SEARCH_RESULTS,
@@ -57,12 +71,31 @@ export type Publication = {
   publishedBy: string; // wallet address
 };
 
+/**
+ * GameService Class
+ *
+ * Core service for all game-related operations including CRUD,
+ * publishing, forking, and analytics tracking.
+ */
 class GameService {
+  /**
+   * Get database connection
+   * @private
+   * @returns MongoDB database instance
+   */
   private db() {
     return client.db("game-hub");
   }
 
-  // Create a new game
+  /**
+   * Create a new game entry
+   *
+   * Generates a unique gameId and initializes the game with default values.
+   * Games start unpublished and must be explicitly published to marketplace or community.
+   *
+   * @param gameData - Game initialization data including wallet address and metadata
+   * @returns Newly created Game object with generated _id
+   */
   async createGame(gameData: {
     walletAddress: string;
     title: string;
