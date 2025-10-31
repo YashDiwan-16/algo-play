@@ -1,5 +1,7 @@
+// Algorand network configuration utilities
 import { AlgoViteClientConfig, AlgoViteKMDConfig } from '../../interfaces/network'
 
+/** Get Algod client configuration from environment variables */
 export function getAlgodConfigFromEnvironment(): AlgoViteClientConfig {
   if (!process.env.NEXT_PUBLIC_ALGOD_SERVER) {
     throw new Error('Attempt to get default algod configuration without specifying NEXT_PUBLIC_ALGOD_SERVER in the environment variables')
