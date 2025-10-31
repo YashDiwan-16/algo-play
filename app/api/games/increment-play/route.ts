@@ -1,13 +1,40 @@
+/**
+ * Increment Play Count API Route
+ *
+ * Handles tracking game plays with anti-spam measures and blockchain integration.
+ * Implements rate limiting, play duration validation, content verification,
+ * and records plays both off-chain (MongoDB) and on-chain (Prize contract).
+ *
+ * Security features:
+ * - IP-based rate limiting (3 plays per minute)
+ * - Minimum play duration validation (5 seconds)
+ * - Game content hash verification
+ * - Graceful degradation if on-chain recording fails
+ *
+ * @module api/games/increment-play
+ */
+
 import { AlgorandClient } from "@algorandfoundation/algokit-utils";
 import { type NextRequest, NextResponse } from "next/server";
 import { gameService } from "@/lib/game-service";
 import { PrizeClient } from "@/smart_contracts/artifacts/prize/PrizeClient";
 
-// Rate limiting: track recent play attempts per IP
+// Rate limiting configuration
+/** In-memory store for tracking play attempts per IP address */
 const playAttempts = new Map<string, { count: number; lastReset: number }>();
-const RATE_LIMIT_WINDOW = 60 * 1000; // 1 minute
-const MAX_PLAYS_PER_WINDOW = 3; // Max 3 plays per minute per IP
+/** Rate limit window duration (1 minute) */
+const RATE_LIMIT_WINDOW = 60 * 1000;
+/** Maximum plays allowed per window per IP */
+const MAX_PLAYS_PER_WINDOW = 3;
 
+/**
+ * Extract client IP address from request headers
+ *
+ * Checks x-forwarded-for and x-real-ip headers to handle proxies.
+ *
+ * @param request - Next.js request object
+ * @returns Client IP address or 'unknown' if not found
+ */
 function getRateLimitKey(request: NextRequest): string {
   const forwarded = request.headers.get("x-forwarded-for");
   const ip = forwarded
@@ -16,6 +43,14 @@ function getRateLimitKey(request: NextRequest): string {
   return ip;
 }
 
+/**
+ * Check if IP address has exceeded rate limit
+ *
+ * Implements sliding window rate limiting with automatic reset.
+ *
+ * @param ip - Client IP address
+ * @returns true if rate limited, false if request should be allowed
+ */
 function isRateLimited(ip: string): boolean {
   const now = Date.now();
   const attempts = playAttempts.get(ip);
