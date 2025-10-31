@@ -1,3 +1,19 @@
+/**
+ * ConnectWallet Component
+ *
+ * Modal dialog for connecting to Algorand wallets including Pera, Defly,
+ * and other compatible providers. Handles wallet connection, disconnection,
+ * and displays active account information.
+ *
+ * Features:
+ * - Multi-wallet provider support via @txnlab/use-wallet-react
+ * - Displays connected account details
+ * - Handles wallet disconnection and cleanup
+ * - Responsive design with accessible UI
+ *
+ * @component
+ */
+
 import { useWallet, type Wallet, WalletId } from "@txnlab/use-wallet-react";
 import { LogOut, Wallet as WalletIcon } from "lucide-react";
 import Image from "next/image";
@@ -12,11 +28,25 @@ import {
 import { Separator } from "@/components/ui/separator";
 import Account from "./Account";
 
+/**
+ * Props for ConnectWallet component
+ */
 type ConnectWalletInterface = {
+  /** Controls modal visibility */
   openModal: boolean;
+  /** Callback to close the modal */
   closeModal: () => void;
 };
 
+/**
+ * ConnectWallet Modal Component
+ *
+ * Renders a modal dialog with available wallet providers for Algorand.
+ * Shows active account when connected, or provider selection when not connected.
+ *
+ * @param {ConnectWalletInterface} props - Component props
+ * @returns {JSX.Element} Wallet connection modal
+ */
 const ConnectWallet = ({ openModal, closeModal }: ConnectWalletInterface) => {
   const { wallets, activeAddress } = useWallet();
 
