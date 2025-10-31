@@ -15,6 +15,7 @@ export function getAlgodConfigFromEnvironment(): AlgoViteClientConfig {
   }
 }
 
+/** Get Indexer client configuration from environment variables */
 export function getIndexerConfigFromEnvironment(): AlgoViteClientConfig {
   if (!process.env.NEXT_PUBLIC_INDEXER_SERVER) {
     throw new Error('Attempt to get default indexer configuration without specifying NEXT_PUBLIC_INDEXER_SERVER in the environment variables')
