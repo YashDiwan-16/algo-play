@@ -1,0 +1,328 @@
+{
+  "last-round": 115,
+  "txn-groups": [
+    {
+      "txn-results": [
+        {
+          "txn-result": {
+            "txn": {
+              "txn": {
+                "type": "appl",
+                "snd": "PKPDXXG5W3WY4NTGAINZFBTYODPAHLQOUFL7N5ZL7T6JPYSRI5WFWYP5SY",
+                "lv": 1115,
+                "gen": "dockernet-v1",
+                "gh": "oFYSDq1GfRuECaUEM5QDYKaAa7hTHJrmgmN2bjqc7Z8=",
+                "fee": 1000,
+                "fv": 115,
+                "note": "QUxHT0tJVF9ERVBMT1lFUjpqeyJuYW1lIjoiQWlQb29sR2FtZVYyIiwidmVyc2lvbiI6IjEuMCJ9",
+                "apap": "CiADAAECJggJdG90YWxQb29sCmdhbWVTdGF0dXMGd2lubmVyD2N1cnJlbnRHYW1lUG9vbAVvd25lcgpodW1hblN0YWtlCGJvdENvdW50BBUffHUxGEAAFCkiZygiZycFImcnBiJnKyJnKiJnMRtBAEaCCQSD8UdIBPYiFkIEudiK6QQjHBQ7BFLElKAEXtIliQTuQPccBJ2U5N0EWAV1YDYaAI4JAIQAdABgAFAARAA4ACYAFAACIkMxGRREMRhEiAGEFicHTFCwI0MxGRREMRhEiAFtFicHTFCwI0MxGRREMRhEiAFWFicHTFCwI0MxGRREMRhEiAEcI0MxGRREMRhEiADuI0MxGRREMRhENhoBF4gAkCNDMRkURDEYRDYaARc2GgIXiABCI0MxGRREMRhENhoBF4gAFSNDMRkURDEYFESIAAIjQycEMQBniYoBADEAIicEZUQSRCIpZUQURCIoZUSL/wgoTGeJigIAIillRBREi/5Ei/6L/wsiKGVESwEPRCIoZURLAQkoTGcnBYv+ZycGi/9ni/4IK0xnKSNnKiJniYoBACIpZUQjEkSL/0EAB4v/IxJBADQjRIv/IxJBABmxMQAiK2VEsgiyByOyECKyAbMqI2cpJGeJIihlRCIrZUQIKExnKiRnQv/qIkL/yTEAIicEZUQSRCIpZUQkEkQpImcnBSJnJwYiZysiZyoiZ4kxACInBGVEEkQiKWVEFESxIicEZUQiKGVEsgiyByOyECKyAbMoImeJIihlRIkiKWVEiSIqZUSJ",
+                "apsu": "CoEBQw==",
+                "apgs": {
+                  "nui": 6,
+                  "nbs": 1
+                }
+              }
+            },
+            "application-index": 1140,
+            "global-state-delta": [
+              {
+                "key": "Z2FtZVN0YXR1cw==",
+                "value": {
+                  "action": 2
+                }
+              },
+              {
+                "key": "dG90YWxQb29s",
+                "value": {
+                  "action": 2
+                }
+              },
+              {
+                "key": "aHVtYW5TdGFrZQ==",
+                "value": {
+                  "action": 2
+                }
+              },
+              {
+                "key": "Ym90Q291bnQ=",
+                "value": {
+                  "action": 2
+                }
+              },
+              {
+                "key": "Y3VycmVudEdhbWVQb29s",
+                "value": {
+                  "action": 2
+                }
+              },
+              {
+                "key": "d2lubmVy",
+                "value": {
+                  "action": 2
+                }
+              }
+            ]
+          },
+          "app-budget-consumed": 26,
+          "exec-trace": {
+            "approval-program-hash": "goiRNDvR5XwJcrOJ0OTxoS5kaiLnR5bZRYIuxvi2Oxk=",
+            "approval-program-trace": [
+              {
+                "pc": 1
+              },
+              {
+                "pc": 6
+              },
+              {
+                "pc": 83,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ]
+              },
+              {
+                "pc": 85,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 88,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "Z2FtZVN0YXR1cw=="
+                  }
+                ]
+              },
+              {
+                "pc": 89,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ]
+              },
+              {
+                "pc": 90,
+                "stack-pop-count": 2,
+                "state-changes": [
+                  {
+                    "app-state-type": "g",
+                    "key": "Z2FtZVN0YXR1cw==",
+                    "operation": "w",
+                    "new-value": {
+                      "type": 2
+                    }
+                  }
+                ]
+              },
+              {
+                "pc": 91,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "dG90YWxQb29s"
+                  }
+                ]
+              },
+              {
+                "pc": 92,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ]
+              },
+              {
+                "pc": 93,
+                "stack-pop-count": 2,
+                "state-changes": [
+                  {
+                    "app-state-type": "g",
+                    "key": "dG90YWxQb29s",
+                    "operation": "w",
+                    "new-value": {
+                      "type": 2
+                    }
+                  }
+                ]
+              },
+              {
+                "pc": 94,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "aHVtYW5TdGFrZQ=="
+                  }
+                ]
+              },
+              {
+                "pc": 96,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ]
+              },
+              {
+                "pc": 97,
+                "stack-pop-count": 2,
+                "state-changes": [
+                  {
+                    "app-state-type": "g",
+                    "key": "aHVtYW5TdGFrZQ==",
+                    "operation": "w",
+                    "new-value": {
+                      "type": 2
+                    }
+                  }
+                ]
+              },
+              {
+                "pc": 98,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "Ym90Q291bnQ="
+                  }
+                ]
+              },
+              {
+                "pc": 100,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ]
+              },
+              {
+                "pc": 101,
+                "stack-pop-count": 2,
+                "state-changes": [
+                  {
+                    "app-state-type": "g",
+                    "key": "Ym90Q291bnQ=",
+                    "operation": "w",
+                    "new-value": {
+                      "type": 2
+                    }
+                  }
+                ]
+              },
+              {
+                "pc": 102,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "Y3VycmVudEdhbWVQb29s"
+                  }
+                ]
+              },
+              {
+                "pc": 103,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ]
+              },
+              {
+                "pc": 104,
+                "stack-pop-count": 2,
+                "state-changes": [
+                  {
+                    "app-state-type": "g",
+                    "key": "Y3VycmVudEdhbWVQb29s",
+                    "operation": "w",
+                    "new-value": {
+                      "type": 2
+                    }
+                  }
+                ]
+              },
+              {
+                "pc": 105,
+                "stack-additions": [
+                  {
+                    "type": 1,
+                    "bytes": "d2lubmVy"
+                  }
+                ]
+              },
+              {
+                "pc": 106,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ]
+              },
+              {
+                "pc": 107,
+                "stack-pop-count": 2,
+                "state-changes": [
+                  {
+                    "app-state-type": "g",
+                    "key": "d2lubmVy",
+                    "operation": "w",
+                    "new-value": {
+                      "type": 2
+                    }
+                  }
+                ]
+              },
+              {
+                "pc": 108,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ]
+              },
+              {
+                "pc": 110,
+                "stack-pop-count": 1
+              },
+              {
+                "pc": 183,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ]
+              },
+              {
+                "pc": 184,
+                "stack-additions": [
+                  {
+                    "type": 2
+                  }
+                ],
+                "stack-pop-count": 1
+              }
+            ]
+          }
+        }
+      ],
+      "app-budget-added": 700,
+      "app-budget-consumed": 26,
+      "failed-at": [
+        0
+      ],
+      "failure-message": "transaction DBXSUW62M2366CMOKHRT66YPYIP7P25ISGRG2SVC3DHZRCMD7XDA: transaction rejected by ApprovalProgram"
+    }
+  ],
+  "version": 2,
+  "eval-overrides": {
+    "allow-empty-signatures": true,
+    "fix-signers": true,
+    "max-log-calls": 2048,
+    "max-log-size": 65536
+  },
+  "exec-trace-config": {
+    "enable": true,
+    "scratch-change": true,
+    "stack-change": true,
+    "state-change": true
+  }
+}
