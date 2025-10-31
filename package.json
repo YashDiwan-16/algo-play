@@ -1,7 +1,10 @@
 {
-  "name": "game-hub",
+  "name": "algo-play",
   "version": "0.1.0",
+  "description": "AlgoPlay - AI-powered gaming platform on Algorand blockchain",
   "private": true,
+  "author": "YashDiwan-16",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
